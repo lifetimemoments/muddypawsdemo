@@ -50,6 +50,7 @@
     addEventListener("mousemove", (e) => {
       dx = e.clientX; dy = e.clientY;
       cursorDot.style.transform = `translate(${dx}px, ${dy}px) translate(-50%,-50%)`;
+      cursor.classList.add("is-active");
     });
     const followRing = () => {
       rx += (dx - rx) * 0.16;

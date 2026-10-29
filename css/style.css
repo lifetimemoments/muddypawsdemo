@@ -75,7 +75,8 @@ button { font: inherit; cursor: pointer; background: none; border: 0; color: inh
 /* ---------- custom cursor ---------- */
 .cursor { display: none; }
 @media (hover: hover) and (pointer: fine) {
-  .cursor { display: block; }
+  .cursor { display: block; opacity: 0; transition: opacity 0.25s; }
+  .cursor.is-active { opacity: 1; }
   .cursor__dot {
     position: fixed; top: 0; left: 0;
     width: 8px; height: 8px;
